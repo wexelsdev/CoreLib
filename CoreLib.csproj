@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{199838C7-EE78-4F15-B1C0-FE47607569B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoreLib</RootNamespace>
+    <AssemblyName>CoreLib</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>embedded</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>embedded</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AntiAFK\API\Features.cs" />
+    <Compile Include="AntiAFK\Events.cs" />
+    <Compile Include="AntiAFK\Handlers\ServerHandlers.cs" />
+    <Compile Include="Commands\RemoteAdmin\CustomItem.cs" />
+    <Compile Include="Commands\RemoteAdmin\CustomItemsGive.cs" />
+    <Compile Include="Commands\RemoteAdmin\CustomItemsList.cs" />
+    <Compile Include="Commands\RemoteAdmin\CustomRole.cs" />
+    <Compile Include="Commands\RemoteAdmin\CustomRolesGive.cs" />
+    <Compile Include="Commands\RemoteAdmin\CustomRolesList.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="CustomItems\API\Extensions\CustomItemExtensions.cs" />
+    <Compile Include="CustomItems\API\Features\CustomArmor.cs" />
+    <Compile Include="CustomItems\API\Features\CustomGrenade.cs" />
+    <Compile Include="CustomItems\API\Features\CustomItem.cs" />
+    <Compile Include="CustomItems\API\Features\CustomKeycard.cs" />
+    <Compile Include="CustomItems\API\Features\CustomWeapon.cs" />
+    <Compile Include="CustomItems\Events.cs" />
+    <Compile Include="CustomItems\Patches\ProcessCollisionPatch.cs" />
+    <Compile Include="CustomRoles\API\Extensions\CustomRoleExtensions.cs" />
+    <Compile Include="CustomRoles\API\Features\CustomRole.cs" />
+    <Compile Include="CustomRoles\API\Features\SchematicController.cs" />
+    <Compile Include="CustomRoles\Patches\RoundEndPatch.cs" />
+    <Compile Include="CustomAbilities\API\Extensions.cs" />
+    <Compile Include="CustomAbilities\API\Features\CustomAbility.cs" />
+    <Compile Include="CustomAbilities\Events.cs" />
+    <Compile Include="CustomRoundEnding\API.cs" />
+    <Compile Include="CustomRoundEnding\Enums\RestartType.cs" />
+    <Compile Include="CustomRoundEnding\Patches\RoundEndPatch.cs" />
+    <Compile Include="CustomRoundEnding\Patches\SummaryRpcPatch.cs" />
+    <Compile Include="CustomSquads\API\Features\CustomSquad.cs" />
+    <Compile Include="CustomSquads\Events.cs" />
+    <Compile Include="DevTools\Components\GrenadeCollision.cs" />
+    <Compile Include="DevTools\Cooldowner\Cooldown.cs" />
+    <Compile Include="DevTools\Cooldowner\PlayerCooldown.cs" />
+    <Compile Include="DevTools\DataTypes\SecondCounter.cs" />
+    <Compile Include="DevTools\Enums\CustomInfoColor.cs" />
+    <Compile Include="DevTools\Extensions\CollectionExtensions.cs" />
+    <Compile Include="DevTools\Extensions\CustomInfoExtensions.cs" />
+    <Compile Include="DevTools\Extensions\FirearmExtensions.cs" />
+    <Compile Include="DevTools\Extensions\ItemTypeExtensions.cs" />
+    <Compile Include="DevTools\Extensions\MathExtensions.cs" />
+    <Compile Include="DevTools\Extensions\MecExtensions.cs" />
+    <Compile Include="DevTools\Extensions\Other.cs" />
+    <Compile Include="DevTools\Extensions\PlayerExtensions.cs" />
+    <Compile Include="DevTools\Extensions\ReflectionExtensions.cs" />
+    <Compile Include="DevTools\Extensions\RoleTypeIdExtensions.cs" />
+    <Compile Include="DevTools\Extensions\StringExtensions.cs" />
+    <Compile Include="DevTools\Extensions\TeleportExtensions.cs" />
+    <Compile Include="DevTools\Extensions\UnityExtensions.cs" />
+    <Compile Include="DevTools\GradientHelper\GradientHelper.cs" />
+    <Compile Include="DevTools\HtmlHelper\HtmlHelper.cs" />
+    <Compile Include="DevTools\Matrix\MatrixPlacer.cs" />
+    <Compile Include="DevTools\Other\Enums\Mask.cs" />
+    <Compile Include="DevTools\Other\Helpers.cs" />
+    <Compile Include="DevTools\Other\Positioning.cs" />
+    <Compile Include="DevTools\Other\Prefabs.cs" />
+    <Compile Include="DevTools\PlayerData\PlayerData.cs" />
+    <Compile Include="DevTools\Pooling\PooledPrimitive.cs" />
+    <Compile Include="DevTools\Pooling\PrimitivePool.cs" />
+    <Compile Include="DevTools\PrimitiveHealth\DamageSensitive.cs" />
+    <Compile Include="DevTools\PrimitiveHealth\Handlers.cs" />
+    <Compile Include="DevTools\PrimitiveHealth\HealthObject.cs" />
+    <Compile Include="DevTools\PrimitiveHealth\HealthObjectDyingEventArgs.cs" />
+    <Compile Include="DevTools\PrimitiveHealth\HealthObjectHurtingEventArgs.cs" />
+    <Compile Include="DevTools\Session\Models\Session.cs" />
+    <Compile Include="DevTools\Session\Models\SessionVariable.cs" />
+    <Compile Include="DevTools\Session\PlayerExtensions.cs" />
+    <Compile Include="DevTools\SpawnTools\Spawn.cs" />
+    <Compile Include="DevTools\SpawnTools\Models\SpawnInfo.cs" />
+    <Compile Include="DevTools\SpawnTools\RoomSpawnPoint.cs" />
+    <Compile Include="Events\EventArgs\Consumable\ActivatingEffectsEventArgs.cs" />
+    <Compile Include="Events\EventArgs\Consumable\EffectsActivatedEventArgs.cs" />
+    <Compile Include="Events\Handlers\Consumable.cs" />
+    <Compile Include="Events\Patches\ActivateEffectsPatch.cs" />
+    <Compile Include="Events\Patches\OnEffectsActivatedPatch.cs" />
+    <Compile Include="Other\CoreCommand\AutoPermCheckCommand.cs" />
+    <Compile Include="Other\Informer\Events.cs" />
+    <Compile Include="Other\Informer\Handlers\PlayerHandlers.cs" />
+    <Compile Include="Other\Informer\Patches\LogoPatch.cs" />
+    <Compile Include="Other\Patches\HelpCommandPatch.cs" />
+    <Compile Include="Other\Patches\InstallCommandPatch.cs" />
+    <Compile Include="Other\Patches\KeyCommandPatch.cs" />
+    <Compile Include="Other\Patches\PmSetGroupCommandPatch.cs" />
+    <Compile Include="Other\Patches\ReloadConfigCommandPatch.cs" />
+    <Compile Include="Other\Patches\SetGroupCommandPatch.cs" />
+    <Compile Include="Other\Patches\SudoCommandPatch.cs" />
+    <Compile Include="PrimitiveEffects\EffectProcessor.cs" />
+    <Compile Include="PrimitiveEffects\Examples\SpiralExample.cs" />
+    <Compile Include="PrimitiveEffects\Extensions\PrimitiveExtensions.cs" />
+    <Compile Include="PrimitiveEffects\Penetrate.cs" />
+    <Compile Include="PrimitiveEffects\Other\IntervalRecord.cs" />
+    <Compile Include="PrimitiveEffects\PrimitiveEffect.cs" />
+    <Compile Include="PrimitiveEffects\SparkEffects\SparkEffects.cs" />
+    <Compile Include="PrimitiveEffects\SparksMaker.cs" />
+    <Compile Include="CorePlugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DevTools\TeleportTools\Events.cs" />
+    <Compile Include="DevTools\TeleportTools\Handlers\MapHandlers.cs" />
+    <Compile Include="DevTools\TeleportTools\Handlers\PlayerHandlers.cs" />
+    <Compile Include="DevTools\TeleportTools\Handlers\WarheadHandlers.cs" />
+    <Compile Include="Translations.cs" />
+    <Compile Include="UI\HintExtensions.cs" />
+    <Compile Include="UI\Patches\HintPatch.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CustomSquads\API\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\sl_libs\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\sl_libs\Assembly-CSharp-Publicized.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\sl_libs\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="CommandSystem.Core">
+      <HintPath>..\..\sl_libs\CommandSystem.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.API">
+      <HintPath>..\..\sl_libs\Exiled.API.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.Events">
+      <HintPath>..\..\sl_libs\Exiled.Events.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.Loader">
+      <HintPath>..\..\sl_libs\Exiled.Loader.dll</HintPath>
+    </Reference>
+    <Reference Include="Exiled.Permissions">
+      <HintPath>..\..\sl_libs\Exiled.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="HintServiceMeow">
+      <HintPath>..\..\sl_libs\HintServiceMeow-Exiled.dll</HintPath>
+    </Reference>
+    <Reference Include="LabApi">
+      <HintPath>..\..\sl_libs\LabApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirror">
+      <HintPath>..\..\sl_libs\Mirror.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Posix">
+      <HintPath>..\..\sl_libs\Mono.Posix.dll</HintPath>
+    </Reference>
+    <Reference Include="NorthwoodLib">
+      <HintPath>..\..\sl_libs\NorthwoodLib.dll</HintPath>
+    </Reference>
+    <Reference Include="PluginAPI">
+      <HintPath>..\..\sl_libs\PluginAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Pooling">
+      <HintPath>..\..\sl_libs\Pooling.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectMER">
+      <HintPath>..\..\sl_libs\ProjectMER.dll</HintPath>
+    </Reference>
+	<Reference Include="System" />
+    <Reference Include="System.Core">
+      <HintPath>..\..\sl_libs\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\sl_libs\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\sl_libs\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\sl_libs\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\sl_libs\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="YamlDotNet">
+      <HintPath>..\..\sl_libs\YamlDotNet.dll</HintPath>
+    </Reference>
+
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+</Project>
